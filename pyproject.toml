@@ -1,0 +1,24 @@
+[project]
+name = "duong"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "", email = ""},
+]
+dependencies = ["flask>=3.1.0", "pydantic>=2.10.6", "peewee>=3.17.9", "dotenv>=0.9.9", "flask-smorest>=0.45.0", "psycopg2>=2.9.10", "psycopg2-binary>=2.9.10"]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+start= "python -m server"
+
+[tool.ruff]
+indent-width = 2
+
+[tool.ruff.lint.flake8-unused-arguments]
+ignore-variadic-names = true
